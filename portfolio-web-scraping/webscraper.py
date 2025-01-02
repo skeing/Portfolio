@@ -101,7 +101,6 @@ class WebScraper:
             except Exception as e:
                 self.logger.error(f"[ERROR] {self.base_url} にアクセスできませんでした: {e}")
             
-            
             """　ターゲットのidが見つかるまで待機 """
             try:
                 WebDriverWait(self.driver, 30).until(EC.presence_of_element_located((By.ID, self.target_element_id)))    
@@ -246,12 +245,12 @@ if __name__ == '__main__':
         raise FileNotFoundError(f"設定ファイルが見つかりません: {config_path}")
     config.read(config_path)
     
-    # csv,スプレッドシートid,JSONファイル。google_spreadsheet_id,service_account_json,target_element_idのfallbackは非公開のため、ダミー
+    # csv,スプレッドシートid,JSONファイル,取得したいid。google_spreadsheet_id,service_account_json,target_element_idのfallbackは非公開のため、ダミー
     csv_input_path = config.get("DEFAULT", "CsvInputPath", fallback="data/urls.csv")
     csv_output_path = config.get("DEFAULT", "CsvOutputPath", fallback="output/data.csv")
     google_spreadsheet_id = config.get("SPREADSHEET", "GoogleSpreadsheetId", fallback="default_spreadsheet_id")
     service_account_json = config.get("JSON", "ServiceAccountJson", fallback="credentials.json")
-    target_element_id = config.get("TARGET", "TargetElementId", fallback="sample") # 取得したいid
+    target_element_id = config.get("TARGET", "TargetElementId", fallback="sample")
     
     # CSVファイル(スクレイピングするURL)の読み込み
     df = pd.read_csv(csv_input_path)
