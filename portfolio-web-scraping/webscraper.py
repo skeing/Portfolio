@@ -23,8 +23,8 @@ from googleapiclient.discovery import build
 
 
 class WebScraper:
-    
-    MAX_RETRIES = 3 # リトライ回数
+    # リトライ回数
+    MAX_RETRIES = 3
             
     def __init__(self, config, logger):
         """ ブラウザ関連の設定 """
