@@ -28,14 +28,24 @@ class WebScraper:
             
     def __init__(self, config, logger):
         """ ブラウザ関連の設定 """
-        self.driver = webdriver.Chrome() # ブラウザを用意
-        self.base_url = config['base_url'] # スクレイピングするURL
-        self.target_element_id = config['target_element_id'] # 取得したいid
+        # ブラウザを用意
+        self.driver = webdriver.Chrome()
+
+        # スクレイピングするURL
+        self.base_url = config['base_url']
+
+        # 取得したいid
+        self.target_element_id = config['target_element_id']
         
         """ ディレクトリおよびファイルパス関連の設定 """
-        self.current_dir = config['current_dir'] #　カレントディレクトリ
-        self.csv_output_path = config['csv_output_path'] # 出力するcsvのパスの末尾
-        self.service_account_json = config['service_account_json'] # スプレッドシート保存用JSONファイル
+        #　カレントディレクトリ
+        self.current_dir = config['current_dir']
+
+        # 出力するcsvのパスの末尾
+        self.csv_output_path = config['csv_output_path']
+
+        # スプレッドシート保存用JSONファイル
+        self.service_account_json = config['service_account_json']
         
         """ Googleスプレッドシートid """
         self.google_spreadsheet_id = config['google_spreadsheet_id']
