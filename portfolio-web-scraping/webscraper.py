@@ -65,7 +65,6 @@ class WebScraper:
             try:
                 # スクレイピング処理
                 self.logger.info(f"[INFO] スクレイピングを開始します: {attempt}回目")
-                
                 self.scraping()
                 
                 # CSV保存処理。CSV保存が失敗またはキャンセルの場合は終了
