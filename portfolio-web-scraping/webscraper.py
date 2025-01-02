@@ -37,9 +37,6 @@ class WebScraper:
         #　カレントディレクトリ
         self.current_dir = config['current_dir']
         
-        # 取得したいID
-        self.target_id = config['target_id']
-        
         # スプレッドシートid
         self.google_spreadsheet_id = config['google_spreadsheet_id']
         
