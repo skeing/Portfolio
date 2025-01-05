@@ -39,4 +39,4 @@ Laravelを使用した簡易的なプロジェクトです。現在は、静的�
 - PHP: 8.2.12
 - Composer: 2.8.4
 - Laravel Framework:10.48.25
-- Webサーバー: Xampp
+- Webサーバー: XAMPP
