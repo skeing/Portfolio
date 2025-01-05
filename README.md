@@ -24,7 +24,7 @@ Googleスプレッドシートとの連携や.iniファイルの読み込み処�
 - Python:3.12.4
 - Spyder:5.5.1
 
-### Laravel Basic
+### Laravel-Basic
 
 #### 概要
 Laravelを使用した簡易的なプロジェクトです。現在は、静的なページを表示する機能のみを実装しています。
