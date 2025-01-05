@@ -39,4 +39,17 @@ Laravelを使用した簡易的なプロジェクトです。現在は、静的�
 - PHP: 8.2.12
 - Composer: 2.8.4
 - Laravel Framework:10.48.25
-- Webサーバー: XAMPP
+- Webサーバー: XAMPP  
+
+### cosmetics
+#### 概要
+化粧品のLPです。  
+デザインはFigmaで作成し、HTML・CSS・JavaScriptを用いて忠実に再現しました。  
+
+#### 特徴
+ **レスポンシブ対応**: スマートフォン、タブレット、デスクトップに対応。
+- **ハンバーガーメニュー**: スマートフォン用の画面で、メニュー切り替え機能を実装。
+
+#### 動作環境
+- 現在、**URL**で公開中です。以下のリンクからアクセス可能です：
+- [Cosmetics LPを表示](#) *(https://cosmetics.shimoza.site/)* 
