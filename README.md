@@ -52,4 +52,4 @@ Laravelを使用した簡易的なプロジェクトです。現在は、静的�
 
 #### 動作環境
 - 現在、**URL**で公開中です。以下のリンクからアクセス可能です：  
--*https://cosmetics.shimoza.site/* 
+- *https://cosmetics.shimoza.site/* 
