@@ -212,13 +212,12 @@ class WebScraper:
             self.logger.warning(f"[WARNING] ブラウザを閉じる際にエラーが発生しました: {e}")          
                 
 if __name__ == '__main__':
-    """ タスクスケジューラ定義 """
-    # 現在のスクリプトのディレクトリを取得
+    """ 現在のスクリプトのディレクトリを取得 """
     if getattr(sys, 'frozen', False):
-        # タスクスケジューラによって実行されている場合
+        # タスクスケジューラの場合
         current_dir = os.path.dirname(sys.executable)
     else:
-        # 通常のPython実行の場合
+        # 通常のPythonの場合
         current_dir = os.path.dirname(os.path.abspath(__file__))
     
     """ ログ定義 """
