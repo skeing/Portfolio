@@ -94,39 +94,34 @@ class WebScraper:
             self.show_message("処理完了", "データの取得・保存が完了しました。")
     
     def scraping(self):
+        """　スクレイピング対象のWebサイトにアクセス """
         try:
-            """　スクレイピング対象のWebサイトにアクセス """
-            try:
-                self.driver.get(self.base_url)
-            except Exception as e:
-                self.logger.error(f"[ERROR] {self.base_url} にアクセスできませんでした: {e}")
-            
-            """　ターゲットのidが見つかるまで待機 """
-            try:
-                WebDriverWait(self.driver, 30).until(EC.presence_of_element_located((By.ID, self.target_element_id)))    
-            except Exception as e:
-                self.logger.error(f"[ERROR] 取得対象:{self.target_id}が見つかりませんでした: {e}")
-            
-            """　データ抽出関数 """
-            try:
-                html = self.driver.page_source
-                self.soup = BeautifulSoup(html, 'html.parser')
-            except Exception as e:
-                self.logger.error(f"[ERROR] BeautifulSoupによるHTML解析が失敗しました: {e}, HTML内容: {html[:100]}...")
-        
-            """　self.soupから「場所」と「天気」を取り出す """
-            try:
-                for content in self.soup.find_all(class_='contents'):
-                    location = content.find('h2').get_text(strip=True)
-                    weather = content.find('p').get_text(strip=True)
-                    self.location_weather_data.append({'場所': location, '天気': weather})
-            except Exception as e:
-                self.logger.error(f"[ERROR] 場所と天気の抽出ができませんでした: {e}")
-        
+            self.driver.get(self.base_url)
         except Exception as e:
-            print(f"スクレイピング中にエラーが発生しました: {e}")
-            self.logger.error(f"[ERROR] スクレイピング中にエラーが発生しました: {e}")
+            self.logger.error(f"[ERROR] {self.base_url} にアクセスできませんでした: {e}")
+        
+        """　ターゲットのidが見つかるまで待機 """
+        try:
+            WebDriverWait(self.driver, 30).until(EC.presence_of_element_located((By.ID, self.target_element_id)))    
+        except Exception as e:
+            self.logger.error(f"[ERROR] 取得対象:{self.target_id}が見つかりませんでした: {e}")
+        
+        """　データ抽出関数 """
+        try:
+            html = self.driver.page_source
+            self.soup = BeautifulSoup(html, 'html.parser')
+        except Exception as e:
+            self.logger.error(f"[ERROR] BeautifulSoupによるHTML解析が失敗しました: {e}, HTML内容: {html[:100]}...")
     
+        """　self.soupから「場所」と「天気」を取り出す """
+        try:
+            for content in self.soup.find_all(class_='contents'):
+                location = content.find('h2').get_text(strip=True)
+                weather = content.find('p').get_text(strip=True)
+                self.location_weather_data.append({'場所': location, '天気': weather})
+        except Exception as e:
+            self.logger.error(f"[ERROR] 場所と天気の抽出ができませんでした: {e}")
+
     def save_to_csv(self):
         """　csv保存処理 """
         try:
