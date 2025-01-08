@@ -213,12 +213,7 @@ class WebScraper:
                 
 if __name__ == '__main__':
     """ 現在のスクリプトのディレクトリを取得 """
-    if getattr(sys, 'frozen', False):
-        # タスクスケジューラの場合
-        current_dir = os.path.dirname(sys.executable)
-    else:
-        # 通常のPythonの場合
-        current_dir = os.path.dirname(os.path.abspath(__file__))
+    current_dir = os.path.dirname(sys.executable if getattr(sys, 'frozen', False) else os.path.abspath(__file__))
     
     """ ログ定義 """
     # exeファイルと同じディレクトリにログファイルにする
