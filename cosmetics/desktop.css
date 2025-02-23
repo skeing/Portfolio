@@ -1,0 +1,215 @@
+/* 全体リセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+/* リストの記号を消す */
+ul,
+li {
+    list-style: none;
+}
+
+.container {
+    position: relative;
+    max-width: 1440px;
+    height: auto;
+    background: #FFFFF7;
+    margin: 0 auto;
+}
+
+/* FV */
+#fv {
+    position: absolute;
+    width: 1440px;
+    height: 700px;
+    left: 0px;
+    top: 0px;
+    padding: 0;
+    margin: 0 auto;
+    background: url(desktop_images/FV.png) no-repeat center center;
+    background-size: cover;
+}
+
+#fv nav {
+    list-style-type: none;
+}
+
+/* About Products How to use Special offer */
+#header_menu {
+    position: absolute;
+    width: 483px;
+    height: 32px;
+    left: 615px;
+    top: 40px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #500E00;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    white-space: nowrap;
+}
+
+/* 各メニュー間のスペース */
+#header_menu li {
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+/* 下線を消す */
+#header_menu li a {
+    text-decoration: none;
+    color: #500E00;
+}
+
+/* ホバー時の処理:下線を消す */
+#header_menu a:hover {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+/* ショップボタン */
+#shop_button {
+    position: absolute;
+    width: 140px;
+    height: 40px;
+    left: 1120px;
+    top: 32px;
+}
+
+
+/* About */
+#about {
+    position: absolute;
+    width: 1440px;
+    height: 993px;
+    left: 0px;
+    top: 700px;
+}
+
+/* Products */
+#products {
+    position: absolute;
+    width: 1440px;
+    height: 1820px;
+    left: 0px;
+    top: 1693px;
+    background: rgba(215, 198, 182, 0.4);
+}
+
+/* Howtouse */
+#how_to_use {
+    position: absolute;
+    width: 1440px;
+    height: 830px;
+    left: -0.5px;
+    top: 3513px;
+}
+
+/* offer */
+#offer {
+    position: absolute;
+    width: 1440px;
+    height: 950px;
+    left: -0.5px;
+    top: 4343px;
+}
+
+/* bt */
+#bt {
+    position: absolute;
+    width: 580px;
+    height: 90px;
+    left: 465px;
+    top: 5095px;
+}
+
+/* pagetop_bt */
+#pagetop {
+    position: absolute;
+    width: 126px;
+    height: 126px;
+    left: 1122px;
+    top: 5390px;
+    z-index: 2;
+}
+
+/* footer */
+#footer {
+    position: absolute;
+    width: 1440px;
+    height: 300px;
+    left: 0px;
+    top: 5452px;
+    z-index: 1;
+}
+
+/* snsアイコン */
+#sns_icon {
+    position: absolute;
+    width: 113.12px;
+    height: 20.14px;
+    left: 217px;
+    top: 5626px;
+    z-index: 2;
+    display: inline-flex;
+    white-space: nowrap;
+}
+
+#sns_icon a{
+    margin:0 30px 0 0;
+}
+
+/* Privacy Policy Terms of Use Company Contact */
+#footer_menu {
+    position: absolute;
+    width: 375px;
+    height: 150px;
+    left: 696px;
+    top: 5567px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #500E00;
+    z-index: 3;
+    padding: 0;
+    margin: 0;
+}
+
+#footer_menu ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#footer_menu li {
+    display: block;
+    margin:0 30px 0 0;
+    white-space: nowrap;
+}
+
+#footer_menu li a {
+    text-decoration: none;
+    color: #500E00;
+}
+
+#footer_menu a:hover {
+    color: #007bff; /* ホバー時のリンク色 */
+}
