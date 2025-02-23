@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>給与明細一覧</title>
+</head>
+<body>
+    <h1>給与明細一覧</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>従業員名</th>
+                <th>給与</th>
+                <th>発行日</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for payslip in payslips %}
+            <tr>
+                <td>{{ payslip.employee_name }}</td>
+                <td>{{ payslip.salary|floatformat:0 }}円</td>
+                <td>{{ payslip.issued_date|date:"Y年m月d日" }}</td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="3">データがありません。</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
