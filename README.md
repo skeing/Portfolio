@@ -3,7 +3,7 @@
 商用利用や実運用を目的としたものではございません。  
 また、スクリプトの流用や改造による再配布はお控えください。
 ## 各フォルダの説明  
-### cosmetics
+### ◆ cosmetics
 #### 概要
 化粧品のランディングページ（LP）です。  
 デザインをFigmaで作成し、HTML・CSS・JavaScriptを使用して忠実にコーディングしました。
@@ -16,7 +16,7 @@
 - 現在、以下のリンクからアクセス可能です：  
 - *https://cosmetics.shimoza.site/* 
 
-### Laravel-Basic
+### ◆ Laravel-Basic
 
 #### 概要
 Laravelを使用した簡易的なプロジェクトです。現在は、静的なページを表示する機能のみを実装しています。
@@ -33,7 +33,7 @@ Laravelを使用した簡易的なプロジェクトです。現在は、静的�
 - Laravel Framework:10.48.25
 - Webサーバー: XAMPP  
 
-### portfolio-web-scraping
+### ◆ portfolio-web-scraping
 
 #### 概要
 Webスクレイピングしたデータを一覧化し、CSVやGoogleスプレッドシートに保存するツールです。このリポジトリには、スクレイピングアプリケーションに関連するコードやリソースをまとめています。
@@ -54,7 +54,7 @@ Googleスプレッドシートとの連携や.iniファイルの読み込み処�
 - Python:3.12.4
 - Spyder:5.5.1
 
-### payroll_system
+### ◆ payroll_system
 
 #### 概要
 Djangoを使用して開発した簡易的な給与明細管理システムです。
@@ -74,7 +74,7 @@ Djangoを使用して開発した簡易的な給与明細管理システムで�
 ・データベース: SQLite
 ・OS: Windows 10
 
-### sales_report
+### ◆ sales_report
 
 #### 概要
 このプロジェクトは Google Apps Script (GAS) を使用して、Google スプレッドシート内の売上データを自動集計するツールです。
