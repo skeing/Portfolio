@@ -16,7 +16,7 @@
 - 現在、以下のリンクからアクセス可能です：  
 - *https://cosmetics.shimoza.site/* 
 
-### ◆ Laravel-Basic
+### ◆ laravel-Basic
 
 #### 概要
 Laravelを使用した簡易的なプロジェクトです。現在は、静的なページを表示する機能のみを実装しています。
